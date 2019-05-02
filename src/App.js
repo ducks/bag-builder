@@ -1,12 +1,32 @@
 import React, { Component } from 'react';
-import Brands from './Brands';
+
+import DiscOptions from './DiscOptions';
 import Grid from './Grid';
 import './App.css';
 
 class App extends Component {
-  state = {
-    selectedDiscs: []
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      "selectedDiscs": {
+        "putters": {
+          "vos": [],
+          "os": [],
+          "stable": [],
+          "us": [],
+          "vus": []
+        },
+        "midranges": {
+          "vos": [],
+          "os": [],
+          "stable": [],
+          "us": [],
+          "vus": []
+        }
+      }
+    };
+  }
 
   listDiscs = () => {
 
@@ -18,7 +38,9 @@ class App extends Component {
         <header>
         </header>
         <main>
-          <Grid />
+          <Grid 
+            selectedDiscs={ this.state.selectedDiscs } />
+          <DiscOptions />
         </main>
       </div>
     );

@@ -6,14 +6,14 @@
     ],
     "discs": [
       {
-        "name": "reko",
+        "name": "Reko",
         "plastics": [
           "K1", "K1 Glow", "K3"
         ],
         "stability": "stable"
       },
       {
-        "name": "berg",
+        "name": "Berg",
         "plastics": [
           "K1", "K1 Glow", "K2", "K3"
         ],
