@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import DiscOptions from './DiscOptions';
+import DiscOptions from './components/discs/DiscOptions';
 import Table from './components/table/Table';
 import './css/App.css';
 
