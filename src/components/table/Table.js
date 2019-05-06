@@ -1,7 +1,7 @@
 import React from 'react';
 import Cell from './Cells';
 
-class Grid extends React.Component {
+class Table extends React.Component {
   renderCell(value) {
     const disc = value;
 
@@ -72,4 +72,4 @@ class Grid extends React.Component {
   }
 }
 
-export default Grid;
+export default Table;

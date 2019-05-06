@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import DiscOptions from './DiscOptions';
-import Grid from './Grid';
-import './App.css';
+import Table from './components/table/Table';
+import './css/App.css';
 
 class App extends Component {
   constructor(props) {
@@ -98,7 +98,7 @@ class App extends Component {
         <header>
         </header>
         <main>
-          <Grid 
+          <Table 
             selectedDiscs={ this.state.selectedDiscs } />
           <DiscOptions
             form={ this.state.form }

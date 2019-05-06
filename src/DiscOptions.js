@@ -1,7 +1,7 @@
 import React from "react";
 
-import Input from './Input';
-import Select from './Select';
+import Input from './components/form/Input';
+import Select from './components/form/Select';
 
 class DiscOptions extends React.Component {
   render() {
