@@ -9,6 +9,11 @@ class App extends Component {
     super(props);
 
     this.state = {
+      "form": {
+        "name": '',
+        "type": '',
+        "stability": ''
+      },
       "selectedDiscs": {
         "putters": {
           "vos": [],
@@ -23,14 +28,69 @@ class App extends Component {
           "stable": [],
           "us": [],
           "vus": []
+        },
+        "fairway": {
+          "vos": [],
+          "os": [],
+          "stable": [],
+          "us": [],
+          "vus": []
+        },
+        "control": {
+          "vos": [],
+          "os": [],
+          "stable": [],
+          "us": [],
+          "vus": []
+        },
+        "distance": {
+          "vos": [],
+          "os": [],
+          "stable": [],
+          "us": [],
+          "vus": []
         }
       }
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  listDiscs = () => {
+  handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
 
-  };
+    this.setState(updater => ({
+      form: {
+        ...updater.form,
+        [name]: value,
+      }
+    }));
+  }
+
+  handleSubmit(event) {
+    const name = this.state.form.name;
+    const type = this.state.form.type;
+    const stability = this.state.form.stability;
+
+    this.setState(updater => ({
+      selectedDiscs: {
+        ...updater.selectedDiscs,
+        [type]: {
+          ...updater.selectedDiscs[type],
+          [stability]: [
+            ...updater.selectedDiscs[type][stability],
+            name
+          ]
+        }
+      }
+    }), () => {
+      alert('disc selected');
+    });
+
+    event.preventDefault();
+  }
 
   render() {
     return (
@@ -40,7 +100,10 @@ class App extends Component {
         <main>
           <Grid 
             selectedDiscs={ this.state.selectedDiscs } />
-          <DiscOptions />
+          <DiscOptions
+            form={ this.state.form }
+            handleSubmit={ this.handleSubmit }
+            handleChange={ this.handleChange } />
         </main>
       </div>
     );

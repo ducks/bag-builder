@@ -2,16 +2,9 @@ import React from "react";
 
 import brands from './disc-list.json';
 import Discs from './Discs';
+import Select from './Select';
 
 class DiscOptions extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: '' };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
   getDiscs(brands) {
     let allDiscs = [];
 
@@ -28,38 +21,56 @@ class DiscOptions extends React.Component {
     return allDiscs;
   }
 
-  handleChange(event) {
-    this.setState({ 
-      type: event.target.type,
-      value: event.target.value 
-    });
-  }
-
-  handleSubmit(event) {
-    alert('disc selected');
-    event.preventDefault();
-  }
-
   render() {
     const discs = this.getDiscs(brands);
 
     const options = discs.map((disc, i) => (
-      <option key={ i } value={ disc }>{ disc }</option>
+      { title: disc, value: disc }
     ));
 
+    const types = [
+      { title: 'Putter', value: 'putters' },
+      { title: 'Midrange', value: 'midranges' },
+      { title: 'Fairway', value: 'fairway' },
+      { title: 'Control', value: 'control' },
+      { title: 'Distance', value: 'distance' }
+    ];
+
+    const stabilities = [
+      { title: "Very Overstable", value: "vos" },
+      { title: "Overstable", value: "os" },
+      { title: "Stable", value: "stable" },
+      { title: "Understable", value: "us" },
+      { title: "Very Understable", value: "vus" },
+    ];
+
     return (
-      <form name="discOptions" onSubmit={ this.handleSubmit }>
-        <select 
-          value={ this.state.value } 
-          onChange={ this.handleChange }>
-          <option value="">Select disc</option>
-          { options }
-        </select>
-        <select
-          value={ this.state.discType }
-          onChange={ this.handleChange }>
-          <option value="putter.vos">Very OS Putter</option>
-        </select>
+      <form
+        onSubmit={ this.props.handleSubmit }>
+        <Select
+          title = { 'Disc Name' }
+          value = { this.props.form.name }
+          name = { 'name' }
+          options = { options }
+          placeholder = { 'Choose disc' }
+          handleChange={ this.props.handleChange }>
+        </Select>
+        <Select
+          title = { 'Disc Type' }
+          value = { this.props.form.type }
+          name = { 'type' }
+          options = { types }
+          placeholder = { 'Choose disc type' }
+          handleChange={ this.props.handleChange }>
+        </Select>
+        <Select
+          title = { 'Disc Stability' }
+          value = { this.props.form.stability }
+          name = { 'stability' }
+          options = { stabilities }
+          placeholder = { 'Choose disc stability' }
+          handleChange={ this.props.handleChange }>
+        </Select>
         <button type="submit">Add Disc</button>
       </form>
     )

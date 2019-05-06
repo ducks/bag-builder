@@ -2,11 +2,15 @@ import React from 'react';
 
 class Cell extends React.Component {
   render() {
-    return (
-      <td className="cell">
-        { this.props.value }
-      </td>
-    );
+    let rows = [];
+
+    if (this.props.value) {
+      this.props.value.forEach((v) => (
+        rows.push(<p key={ v }>{ v }</p>)
+      ));
+    }
+
+    return <td className="cell">{ rows }</td>;
   }
 }
 

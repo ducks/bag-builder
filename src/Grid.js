@@ -3,9 +3,11 @@ import Cell from './Cells';
 
 class Grid extends React.Component {
   renderCell(value) {
+    const disc = value;
+
     return (
       <Cell 
-        value={ this.props.selectedDiscs.value } />
+        value={ disc } />
     )
   }
 
@@ -26,43 +28,43 @@ class Grid extends React.Component {
         <tbody>
           <tr>
             <th>Putter</th>
-            { this.renderCell("putter.vos") }
-            { this.renderCell("putter.os") }
-            { this.renderCell("putter.stable") }
-            { this.renderCell("putter.us") }
-            { this.renderCell("putter.vus") }
+            { this.renderCell(this.props.selectedDiscs.putters.vos) }
+            { this.renderCell(this.props.selectedDiscs.putters.os) }
+            { this.renderCell(this.props.selectedDiscs.putters.stable) }
+            { this.renderCell(this.props.selectedDiscs.putters.us) }
+            { this.renderCell(this.props.selectedDiscs.putters.vus) }
           </tr>
           <tr>
             <th>Midrange</th>
-            { this.renderCell("midrange.vos") }
-            { this.renderCell("midrange.os") }
-            { this.renderCell("midrange.stable") }
-            { this.renderCell("midrange.us") }
-            { this.renderCell("midrange.vus") }
+            { this.renderCell(this.props.selectedDiscs.midranges.vos) }
+            { this.renderCell(this.props.selectedDiscs.midranges.os) }
+            { this.renderCell(this.props.selectedDiscs.midranges.stable) }
+            { this.renderCell(this.props.selectedDiscs.midranges.us) }
+            { this.renderCell(this.props.selectedDiscs.midranges.vus) }
           </tr>
           <tr>
             <th>Fairway</th>
-            { this.renderCell("fairway.vos") }
-            { this.renderCell("fairway.os") }
-            { this.renderCell("fairway.stable") }
-            { this.renderCell("fairway.us") }
-            { this.renderCell("fairway.vus") }
+            { this.renderCell(this.props.selectedDiscs.fairway.vos) }
+            { this.renderCell(this.props.selectedDiscs.fairway.os) }
+            { this.renderCell(this.props.selectedDiscs.fairway.stable) }
+            { this.renderCell(this.props.selectedDiscs.fairway.us) }
+            { this.renderCell(this.props.selectedDiscs.fairway.vus) }
           </tr>
           <tr>
             <th>Control</th>
-            { this.renderCell("control.vos") }
-            { this.renderCell("control.os") }
-            { this.renderCell("control.stable") }
-            { this.renderCell("control.us") }
-            { this.renderCell("control.vus") }
+            { this.renderCell(this.props.selectedDiscs.control.vos) }
+            { this.renderCell(this.props.selectedDiscs.control.os) }
+            { this.renderCell(this.props.selectedDiscs.control.stable) }
+            { this.renderCell(this.props.selectedDiscs.control.us) }
+            { this.renderCell(this.props.selectedDiscs.control.vus) }
           </tr>
           <tr>
             <th>Distance</th>
-            { this.renderCell("distance.vos") }
-            { this.renderCell("distance.os") }
-            { this.renderCell("distance.stable") }
-            { this.renderCell("distance.us") }
-            { this.renderCell("distance.vus") }
+            { this.renderCell(this.props.selectedDiscs.distance.vos) }
+            { this.renderCell(this.props.selectedDiscs.distance.os) }
+            { this.renderCell(this.props.selectedDiscs.distance.stable) }
+            { this.renderCell(this.props.selectedDiscs.distance.us) }
+            { this.renderCell(this.props.selectedDiscs.distance.vus) }
           </tr>
         </tbody>
       </table>
