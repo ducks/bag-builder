@@ -1,33 +1,10 @@
 import React from "react";
 
-import brands from './disc-list.json';
-import Discs from './Discs';
+import Input from './Input';
 import Select from './Select';
 
 class DiscOptions extends React.Component {
-  getDiscs(brands) {
-    let allDiscs = [];
-
-    brands.forEach(brand => {
-      let discs = brand.discs;
-
-      discs.forEach(disc => {
-        disc.plastics.forEach(plastic => {
-          allDiscs.push(`${plastic} ${disc.name}`);
-        });
-      });
-    });
-
-    return allDiscs;
-  }
-
   render() {
-    const discs = this.getDiscs(brands);
-
-    const options = discs.map((disc, i) => (
-      { title: disc, value: disc }
-    ));
-
     const types = [
       { title: 'Putter', value: 'putters' },
       { title: 'Midrange', value: 'midranges' },
@@ -47,14 +24,13 @@ class DiscOptions extends React.Component {
     return (
       <form
         onSubmit={ this.props.handleSubmit }>
-        <Select
+        <Input
           title = { 'Disc Name' }
           value = { this.props.form.name }
           name = { 'name' }
-          options = { options }
           placeholder = { 'Choose disc' }
           handleChange={ this.props.handleChange }>
-        </Select>
+        </Input>
         <Select
           title = { 'Disc Type' }
           value = { this.props.form.type }
