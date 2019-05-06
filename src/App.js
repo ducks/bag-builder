@@ -86,7 +86,7 @@ class App extends Component {
         }
       }
     }), () => {
-      alert('disc selected');
+      alert('Disc added!');
     });
 
     event.preventDefault();
