@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bag-builder/static/css/main.90b4c065.chunk.css",
-    "main.js": "/bag-builder/static/js/main.15ec4eb0.chunk.js",
-    "main.js.map": "/bag-builder/static/js/main.15ec4eb0.chunk.js.map",
+    "main.js": "/bag-builder/static/js/main.a9b6a763.chunk.js",
+    "main.js.map": "/bag-builder/static/js/main.a9b6a763.chunk.js.map",
     "runtime~main.js": "/bag-builder/static/js/runtime~main.78b9a7c6.js",
     "runtime~main.js.map": "/bag-builder/static/js/runtime~main.78b9a7c6.js.map",
     "static/js/2.f477aa32.chunk.js": "/bag-builder/static/js/2.f477aa32.chunk.js",
     "static/js/2.f477aa32.chunk.js.map": "/bag-builder/static/js/2.f477aa32.chunk.js.map",
     "index.html": "/bag-builder/index.html",
-    "precache-manifest.314486575528116f3f64bb303b667e79.js": "/bag-builder/precache-manifest.314486575528116f3f64bb303b667e79.js",
+    "precache-manifest.38927a40dc6889919c314804f491343d.js": "/bag-builder/precache-manifest.38927a40dc6889919c314804f491343d.js",
     "service-worker.js": "/bag-builder/service-worker.js",
     "static/css/main.90b4c065.chunk.css.map": "/bag-builder/static/css/main.90b4c065.chunk.css.map"
   }
