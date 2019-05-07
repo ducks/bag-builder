@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
+import html2canvas from 'html2canvas';
 
 import DiscOptions from './components/discs/DiscOptions';
 import Table from './components/table/Table';
+import Screenshot from './components/Screenshot';
 import './css/App.css';
 
 class App extends Component {
@@ -53,8 +56,11 @@ class App extends Component {
       }
     };
 
+    this.screenshotElement = React.createRef();
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.takeScreenshot = this.takeScreenshot.bind(this);
   }
 
   handleChange(event) {
@@ -92,6 +98,15 @@ class App extends Component {
     event.preventDefault();
   }
 
+  takeScreenshot = e => {
+    console.log(ReactDOM.findDOMNode(this.refs.screenshotElement));
+
+    html2canvas(document.getElementsByTagName('table')[0])
+      .then(function(canvas) {
+      document.body.appendChild(canvas);
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -99,11 +114,14 @@ class App extends Component {
         </header>
         <main>
           <Table 
+            ref = { element => this.screenshotElement = element }
             selectedDiscs={ this.state.selectedDiscs } />
           <DiscOptions
             form={ this.state.form }
             handleSubmit={ this.handleSubmit }
             handleChange={ this.handleChange } />
+          <Screenshot
+            onClick={ this.takeScreenshot } />
         </main>
       </div>
     );

@@ -14,7 +14,7 @@ class Table extends React.Component {
   render() {
 
     return (
-      <table className="grid">
+      <table>
         <thead>
           <tr>
             <th>Bag Matrix</th>
