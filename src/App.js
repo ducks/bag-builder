@@ -99,11 +99,15 @@ class App extends Component {
   }
 
   takeScreenshot = e => {
-    console.log(ReactDOM.findDOMNode(this.refs.screenshotElement));
+    const canvas = document.getElementsByTagName('canvas')[0];
+
+    if (canvas) {
+      document.body.removeChild(canvas);
+    }
 
     html2canvas(document.getElementsByTagName('table')[0])
       .then(function(canvas) {
-      document.body.appendChild(canvas);
+        document.body.appendChild(canvas);
     });
   }
 

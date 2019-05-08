@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 table {
   border-collapse: collapse;
   margin: 1rem auto 0 auto;
@@ -40,7 +44,8 @@ form {
   text-align: center;
 }
 
-.form-group {
+.form-group,
+button {
   margin-bottom: 1rem;
 }
 
