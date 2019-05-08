@@ -29,7 +29,7 @@ class Table extends React.Component {
     }
 
     return (
-      <table className="grid">
+      <table>
         <thead>
           <tr>
             <th>Bag Matrix</th>
