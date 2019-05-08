@@ -1,0 +1,44 @@
+{
+  "form": {
+    "name": "",
+    "type": "",
+    "stability": ""
+  },
+  "selectedDiscs": {
+    "putters": {
+      "vos": [],
+      "os": [],
+      "stable": [],
+      "us": [],
+      "vus": []
+    },
+    "midranges": {
+      "vos": [],
+      "os": [],
+      "stable": [],
+      "us": [],
+      "vus": []
+    },
+    "fairway": {
+      "vos": [],
+      "os": [],
+      "stable": [],
+      "us": [],
+      "vus": []
+    },
+    "control": {
+      "vos": [],
+      "os": [],
+      "stable": [],
+      "us": [],
+      "vus": []
+    },
+    "distance": {
+      "vos": [],
+      "os": [],
+      "stable": [],
+      "us": [],
+      "vus": []
+    }
+  }
+}

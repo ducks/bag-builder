@@ -3,55 +3,13 @@ import React, { Component } from 'react';
 import DiscOptions from './components/discs/DiscOptions';
 import Table from './components/table/Table';
 import './css/App.css';
+import STATE from './state.json';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      "form": {
-        "name": '',
-        "type": '',
-        "stability": ''
-      },
-      "selectedDiscs": {
-        "putters": {
-          "vos": [],
-          "os": [],
-          "stable": [],
-          "us": [],
-          "vus": []
-        },
-        "midranges": {
-          "vos": [],
-          "os": [],
-          "stable": [],
-          "us": [],
-          "vus": []
-        },
-        "fairway": {
-          "vos": [],
-          "os": [],
-          "stable": [],
-          "us": [],
-          "vus": []
-        },
-        "control": {
-          "vos": [],
-          "os": [],
-          "stable": [],
-          "us": [],
-          "vus": []
-        },
-        "distance": {
-          "vos": [],
-          "os": [],
-          "stable": [],
-          "us": [],
-          "vus": []
-        }
-      }
-    };
+    this.state = STATE;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
