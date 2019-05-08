@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See a live example at
+[https://ducks.github.io/bag-builder/](https://ducks.github.io/bag-builder/)
 
 ## Available Scripts
 
