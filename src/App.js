@@ -50,7 +50,7 @@ class App extends Component {
         }
       }
     }), () => {
-      alert('Disc added!');
+      console.log('Disc added!');
     });
 
     event.preventDefault();
