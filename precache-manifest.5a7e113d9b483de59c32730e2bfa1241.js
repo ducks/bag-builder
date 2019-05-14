@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52738cdf6f78ccbfcd1189a0cdbec8e3",
+    "revision": "6258fbf39e59d57cb58468b287028b33",
     "url": "/bag-builder/index.html"
   },
   {
-    "revision": "163228f887a1dab175cc",
+    "revision": "a5dc3534444956207c7a",
     "url": "/bag-builder/static/css/main.c48df2a6.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bag-builder/static/js/2.2b7cc519.chunk.js"
   },
   {
-    "revision": "163228f887a1dab175cc",
-    "url": "/bag-builder/static/js/main.830f9bd7.chunk.js"
+    "revision": "a5dc3534444956207c7a",
+    "url": "/bag-builder/static/js/main.c2dbb658.chunk.js"
   },
   {
     "revision": "a47f32ae8eb8f4d2c66e",
