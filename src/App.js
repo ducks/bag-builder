@@ -48,6 +48,11 @@ class App extends Component {
             name
           ]
         }
+      },
+      form: {
+        name: '',
+        type: '',
+        stability: ''
       }
     }), () => {
       console.log('Disc added!');

@@ -6,6 +6,7 @@ const Input = (props) => {
       <label htmlFor={ props.name }> { props.title }</label>
       <input
         name={ props.name }
+        value={ props.value }
         onChange={ props.handleChange.bind(this) }>
       </input>
     </div>
