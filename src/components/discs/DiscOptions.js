@@ -3,7 +3,14 @@ import React from "react";
 import Input from '../form/Input';
 import Select from '../form/Select';
 
+import STATE from '../../state.json';
+
 class DiscOptions extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = STATE;
+  };
+
   render() {
     const types = [
       { title: 'Putter', value: 'putters' },

@@ -17,6 +17,7 @@ class App extends Component {
     this.screenshotElement = React.createRef();
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleClear = this.handleclear.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.takeScreenshot = this.takeScreenshot.bind(this);
   }
@@ -33,10 +34,21 @@ class App extends Component {
     }));
   }
 
+  handleclear(event) {
+    console.log(event);
+    event.preventDefault();
+    event.target.reset();
+  }
+
   handleSubmit(event) {
     const name = this.state.form.name;
     const type = this.state.form.type;
     const stability = this.state.form.stability;
+
+    if (!name || !type || !stability) {
+      event.preventDefault();
+      return;
+    };
 
     this.setState(updater => ({
       selectedDiscs: {

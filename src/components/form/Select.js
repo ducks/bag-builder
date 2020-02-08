@@ -7,7 +7,6 @@ const Select = (props) => {
       <select
         name={ props.name }
         defaultValue={ props.value }
-        value={ props.value }
         onChange={ props.handleChange.bind(this) }>
         <option value="" disabled>{ props.placeholder }</option>
         { props.options.map(option => {
